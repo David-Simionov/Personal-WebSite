@@ -4,7 +4,7 @@ This is a personal portfolio website created using HTML and CSS.
 It includes sections such as biography, education, skills, and contact information.
 
 🔗 **Live demo on GitHub Pages**:  
-[Click here to visit]([https://korisnickoime.github.io/ime-na-repo/](https://david-simionov.github.io/Personal-WebSite/))
+[Click here to visit]([https://david-simionov.github.io/Personal-WebSite/))
 
 ## Features
 - Responsive layout using Flexbox
