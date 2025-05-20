@@ -133,7 +133,6 @@ footer p{
     position: relative;
     top: 66px;
 }
-/* 📱 За екрани до 768px (мобилни уреди) */
 @media (max-width: 768px) {
     html, body {
         margin: 0;
@@ -143,33 +142,9 @@ footer p{
     }
 
     nav {
+        position: relative;
         width: 100%;
-        position: relative;
-    }
-
-    nav h1 {
-        position: relative;
-        top: auto;
-        left: auto;
-        font-size: 18px;
-        padding: 20px 10px;
-        border-left: none;
-        color: white;
-        text-align: center;
-    }
-
-    .gorelevo {
-        position: relative;
-        text-align: center;
-        margin-top: 10px;
-        font-size: 14px;
-    }
-
-    .start,
-    .let {
-        font-size: 12px;
-        display: block;
-        text-align: center;
+        height: auto;
     }
 
     nav img {
@@ -178,19 +153,45 @@ footer p{
         display: block;
     }
 
+    nav h1 {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        border-left: none;
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    .gorelevo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 14px;
+        color: white;
+    }
+
+    .start, .let {
+        display: block;
+        font-size: 12px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
     .container {
         width: 100%;
-        margin: 0;
         padding: 0 10px;
         box-sizing: border-box;
     }
 
     .container div {
-        width: 100%;
+        background-color: lightgray;
         margin: 20px 0;
         padding: 15px;
-        box-sizing: border-box;
-        background-color: lightgray;
     }
 
     .container img {
@@ -204,18 +205,18 @@ footer p{
     #biography p {
         margin: 0;
         padding: 10px;
+        text-align: justify;
         border: 1px solid black;
         top: 0;
     }
 
-    #osnovno p,
-    #sredno p,
-    #faks p {
+    #osnovno p, #sredno p, #faks p {
         margin-left: 0;
         top: 0;
     }
 
     #skills {
+        display: flex;
         flex-direction: column;
         gap: 15px;
         padding: 10px 0;
@@ -227,28 +228,28 @@ footer p{
     }
 
     #sk {
-        top: 0;
         text-align: center;
+        top: 0;
     }
 
     footer {
-        width: 100%;
-        padding: 20px 10px;
         background-color: black;
+        padding: 20px 10px;
+        width: 100%;
         box-sizing: border-box;
     }
 
     #contact h2 {
-        text-align: center;
         color: white;
+        text-align: center;
         margin-bottom: 10px;
     }
 
     #contact div {
         display: flex;
         justify-content: center;
-        gap: 10px;
         flex-wrap: wrap;
+        gap: 10px;
     }
 
     footer a {
@@ -257,9 +258,8 @@ footer p{
     }
 
     footer p {
-        position: static;
         color: white;
         text-align: center;
-        margin-top: 15px;
+        margin-top: 10px;
     }
 }
