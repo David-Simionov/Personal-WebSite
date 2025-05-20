@@ -133,70 +133,73 @@ footer p{
     position: relative;
     top: 66px;
 }
+/* ---------- MOBILE RESPONSIVE ---------- */
 @media (max-width: 768px) {
-
     nav h1 {
         position: static;
-        padding: 10px;
-        text-align: center;
+        padding: 20px;
         font-size: 20px;
+        border-left: none;
+        text-align: center;
     }
 
     .gorelevo {
         position: static;
         text-align: center;
-        font-size: 14px;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    #biography div,
-    #education > div,
-    #skills {
         display: block;
+        margin-top: 10px;
     }
 
-    #biography img,
-    #education img {
-        float: none;
-        display: block;
-        margin: 0 auto 10px;
+    .container div {
+        margin: 10px 15px;
+        padding: 15px;
     }
 
     #biography p {
-        margin: 0;
+        margin-left: 0;
+        top: 0;
+    }
+
+    .container img {
+        float: none;
+        display: block;
+        margin: 0 auto 15px;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    #osnovno p, #sredno p, #faks p {
+        margin-left: 0;
         top: 0;
     }
 
     #skills {
-        padding: 10px;
+        flex-direction: column;
+        align-items: center;
     }
 
     #skills div {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    footer .socials {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        width: 90%;
+        top: 0;
     }
 
     footer a {
         position: static;
+        margin: 5px;
     }
 
     footer h2 {
         text-align: center;
-        right: 0;
-        top: 0;
+        position: static;
     }
 
     footer p {
-        top: 0;
+        top: 10px;
+    }
+
+    #contact div {
+        text-align: center;
     }
 }
+
 
