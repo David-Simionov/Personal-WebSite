@@ -134,13 +134,6 @@ footer p{
     top: 66px;
 }
 @media (max-width: 768px) {
-    html, body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        overflow-x: hidden;
-    }
-
     nav {
         position: relative;
         width: 100%;
@@ -158,11 +151,12 @@ footer p{
         top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 16px;
+        font-size: 20px;
         color: white;
         text-align: center;
         padding: 10px;
         border-left: none;
+        background-color: rgba(0, 0, 0, 0.5); /* подобар контраст */
         width: 90%;
         box-sizing: border-box;
     }
@@ -175,74 +169,19 @@ footer p{
         color: white;
     }
 
-    .start, .let {
-        display: block;
-        font-size: 12px;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
-
-    .container div {
-        background-color: lightgray;
-        margin: 20px 0;
-        padding: 15px;
-    }
-
-    .container img {
-        float: none;
-        display: block;
-        margin: 0 auto 15px;
-        max-width: 100%;
-        height: auto;
-    }
-
-    #biography p {
-        margin: 0;
-        padding: 10px;
-        text-align: justify;
-        border: 1px solid black;
-        top: 0;
-    }
-
-    #osnovno p, #sredno p, #faks p {
-        margin-left: 0;
-        top: 0;
-    }
-
-    #skills {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        padding: 10px 0;
-    }
-
-    #skills div {
-        width: 100%;
-        top: 0;
-    }
-
-    #sk {
-        text-align: center;
-        top: 0;
-    }
-
     footer {
         background-color: black;
         padding: 20px 10px;
         width: 100%;
         box-sizing: border-box;
+        text-align: center;
     }
 
     #contact h2 {
         color: white;
         text-align: center;
         margin-bottom: 10px;
+        font-size: 18px;
     }
 
     #contact div {
@@ -250,16 +189,25 @@ footer p{
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
+        margin-bottom: 10px;
     }
 
     footer a {
         position: static;
         margin: 5px;
+        display: inline-block;
+    }
+
+    footer h2 {
+        position: static;
+        margin: 10px 0 5px;
+        text-align: center;
     }
 
     footer p {
         color: white;
         text-align: center;
         margin-top: 10px;
+        position: static;
     }
 }
