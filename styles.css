@@ -142,8 +142,10 @@ footer p{
     }
 
     nav img {
-        z-index: 1;
-        position: relative;
+        width: 100%;
+        height: 250px; /* наместо auto, постави фиксна висина */
+        object-fit: cover; /* ќе ја сече сликата да изгледа убаво */
+        display: block;
     }
 
 
