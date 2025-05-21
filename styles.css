@@ -142,25 +142,26 @@ footer p{
     }
 
     nav img {
-        width: 100%;
-        height: auto;
-        display: block;
+        z-index: 1;
+        position: relative;
     }
 
+
     nav h1 {
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: none;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         font-size: 20px;
         color: white;
         text-align: center;
         padding: 15px 10px;
-        border-left: none;
-        background-color: rgba(0, 0, 0, 0.6);
-        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6); /* полупровидна позадина */
+        width: 90%;
         box-sizing: border-box;
+        z-index: 2; /* важно: за да биде над сликата */
     }
+
 
 
     .gorelevo {
