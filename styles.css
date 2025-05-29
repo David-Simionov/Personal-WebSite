@@ -25,6 +25,10 @@ span{
     left: -542px;
     top: -199px;
     font-size: 15px;
+    display: none;
+}
+h1 :nth-child(6) {
+    margin: 0;
 }
 .start{
     font-size: 12px;
@@ -153,6 +157,7 @@ footer p{
         top: 5px;
         left: 10px;
         font-size: 9px;
+        display: none;
     }
 
     nav h1 {
@@ -165,16 +170,26 @@ footer p{
         text-align: center;
         padding: 15px 10px;
         background-color: rgba(0, 0, 0, 0.6); /* полупровидна позадина */
-        width: 90%;
+        width: 77%;
         box-sizing: border-box;
         z-index: 2; /* важно: за да биде над сликата */
     }
 
-    .start, .let {
-        margin: 0;
+    .start{
+        margin: 5px;
         font-size: 8px;
         text-align: center;
         display: block;
+        position: relative;
+        left: -125px;
+    }
+    .let {
+        margin: 5px;
+        font-size: 8px;
+        text-align: center;
+        display: block;
+        position: relative;
+        left: -101px;
     }
 
     .container {
@@ -258,5 +273,11 @@ footer p{
         position: relative;
         left: -1px;
     }
+    h1 :nth-child(6) {
+        margin: 0;
+        position: relative;
+        left: -39px;
+    }
+
 }
 
