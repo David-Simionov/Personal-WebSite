@@ -1,12 +1,8 @@
-# My Portfolio Website
+# Personal Website
 
-This is a personal portfolio website created using HTML and CSS.  
-It includes sections such as biography, education, skills, and contact information.
-
-## Features
-- Responsive layout using Flexbox
-- Clean and minimal design
-- Sections for bio, education, skills, and contact
+This is my personal website built with HTML, CSS, and JavaScript.
+It showcases information about me, my projects, and ways to get in touch.
+The goal of this project is to highlight my work, design style, and web development skills.
 
 ## Technologies
 - HTML5
