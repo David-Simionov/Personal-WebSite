@@ -634,5 +634,56 @@ body.dark-mode .spinner {
         font-size: 1.1rem;
     }
 }
+/* FIX: Mobile menu text color (light + dark mode) */
+@media (max-width: 768px) {
+    .nav-links {
+        background: #020617;
+    }
+
+    .nav-links a {
+        color: #e5e7eb !important;
+    }
+
+    .nav-links a.active {
+        color: #ffffff !important;
+    }
+}
+@media (max-width: 768px) {
+    body:not(.dark-mode) .nav-links {
+        background: #ffffff;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    body:not(.dark-mode) .nav-links a {
+        color: #111 !important;
+    }
+
+    body:not(.dark-mode) .nav-links a.active {
+        color: #000 !important;
+        font-weight: 600;
+    }
+
+    body:not(.dark-mode) .nav-links a:hover {
+        color: #00bcd4 !important;
+    }
+}
+@media (max-width: 768px) {
+    body.dark-mode .nav-links {
+        background: #020617;
+    }
+
+    body.dark-mode .nav-links a {
+        color: #e5e7eb !important;
+    }
+
+    body.dark-mode .nav-links a.active {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .nav-links a:hover {
+        color: #38bdf8 !important;
+    }
+}
+
 
 
