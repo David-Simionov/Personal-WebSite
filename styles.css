@@ -17,44 +17,83 @@ body {
 }
 
 /* === NAVIGATION === */
+/* === NAVBAR – ACCENT STYLE === */
 header {
-    background: #111;
-    color: #fff;
-    padding: 15px 0;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 999;
+    background: #ffffff;
+    border-bottom: 2px solid #00bcd4;
 }
 
-nav {
+.navbar {
     width: 90%;
     max-width: 1100px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 18px 0;
 }
 
-nav h1 {
+.navbar h1 {
     font-size: 1.4rem;
-    letter-spacing: 1px;
+    font-weight: 700;
+    color: #111;
 }
 
-nav ul {
+/* Links */
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
-nav ul li a {
+.nav-links a {
     text-decoration: none;
-    color: white;
-    transition: color 0.3s;
+    color: #444;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 6px;
+    transition: color 0.25s ease;
 }
 
-nav ul li a:hover {
-    color: #00bcd4;
+/* Left accent line */
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background: #00bcd4;
+    border-radius: 3px;
+    transition: height 0.25s ease;
 }
+
+.nav-links a:hover {
+    color: #111;
+}
+
+.nav-links a:hover::before,
+.nav-links a.active::before {
+    height: 16px;
+}
+
+.nav-links a.active {
+    color: #111;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+}
+
 
 /* === SECTIONS === */
 section {
@@ -188,6 +227,9 @@ section h2::after {
     box-shadow: 0 3px 8px rgba(0,0,0,0.08);
     text-align: left;
 }
+.project-desc{
+    text-align: justify;
+}
 
 #projects h3 {
     color: #00bcd4;
@@ -221,15 +263,19 @@ section h2::after {
 
 /* === FOOTER === */
 footer {
-    background: #111;
-    color: white;
+    margin-top: 80px;
+    padding: 30px 15px;
     text-align: center;
-    padding: 20px;
-    margin-top: 60px;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
+    background: #f8f9fa; /* исто како body, не се издвојува агресивно */
     border-top: 2px solid #00bcd4;
 }
+
+footer p {
+    font-size: 0.9rem;
+    color: #444;
+    letter-spacing: 0.3px;
+}
+
 
 /* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
@@ -340,3 +386,253 @@ footer {
 #contact a{
     display: block;
 }
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 20px;
+    color: #00bcd4;
+}
+
+
+/* =========================
+   DARK MODE – FULL STYLING
+   ========================= */
+
+body.dark-mode {
+    background-color: #0b1220;
+    color: #e5e7eb;
+}
+
+/* HEADINGS */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #f8fafc;
+}
+
+/* TEXT */
+body.dark-mode p,
+body.dark-mode li {
+    color: #cbd5e1;
+}
+
+/* NAVBAR */
+body.dark-mode header {
+    background: #020617;
+}
+
+body.dark-mode .nav-links a {
+    color: #cbd5e1;
+}
+
+body.dark-mode .nav-links a:hover,
+body.dark-mode .nav-links a.active {
+    color: #ffffff;
+}
+
+/* CARDS */
+body.dark-mode .hero-container,
+body.dark-mode .education-item,
+body.dark-mode .project-item,
+body.dark-mode #projects div,
+body.dark-mode #skills li {
+    background: #020617;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+/* PROJECT LINKS */
+body.dark-mode .project-text a {
+    color: #38bdf8;
+}
+
+/* CONTACT ICONS */
+body.dark-mode #contact img {
+    filter: brightness(1.8);
+    opacity: 0.9;
+}
+
+body.dark-mode #contact img:hover {
+    opacity: 1;
+}
+
+/* DARK MODE BUTTON */
+body.dark-mode #theme-toggle {
+    color: #38bdf8;
+}
+
+/* FOOTER */
+body.dark-mode footer {
+    background: #020617;
+}
+
+body.dark-mode footer p {
+    color: white;
+}
+
+/* ACCENT LINE (titles underline) */
+body.dark-mode section h2::after {
+    background: #38bdf8;
+}
+/* CONTACT ICONS – DARK MODE */
+body.dark-mode #contact img {
+    filter: invert(1) brightness(1.8);
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
+body.dark-mode #contact img:hover {
+    opacity: 1;
+}
+body.dark-mode #about p {
+    color: white;
+}
+/* =========================
+   LOADING SCREEN
+   ========================= */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* LOADING TEXT – TECH STYLE */
+.loader-text {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: #38bdf8;
+    margin-left: 6px;
+}
+
+/* Dark mode */
+body.dark-mode .loader-text {
+    color: #38bdf8;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+
+body.dark-mode #loader {
+    background: #020617;
+}
+
+#loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px; /* МНОГУ БЛИСКУ */
+}
+
+.loader-name {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+body.dark-mode .loader-name {
+    color: #f8fafc;
+}
+
+/* Spinner */
+.spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(255,255,255,0.25);
+    border-top-color: #38bdf8;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+}
+
+body.dark-mode .spinner {
+    border: 4px solid rgba(255,255,255,0.2);
+    border-top-color: #38bdf8;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================
+   MOBILE NAVIGATION
+   ========================= */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: #00bcd4;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #020617;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 25px 0;
+        display: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: #e5e7eb;
+        font-size: 1.1rem;
+    }
+}
+
+

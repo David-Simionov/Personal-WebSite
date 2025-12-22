@@ -8,19 +8,40 @@
 </head>
 <body>
 
+<!-- Loading Screen -->
+<div id="loader">
+  <div class="loader-content">
+    <span class="loader-text">LOADING</span>
+    <div class="spinner"></div>
+  </div>
+</div>
+
+
+
+
 <!-- Navigation -->
 <header>
-  <nav>
+  <nav class="navbar">
     <h1>David Simionov</h1>
-    <ul>
-      <li><a href="#home">Home</a></li>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button id="theme-toggle" aria-label="Toggle dark mode">
+      🌙
+    </button>
+    <button class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
   </nav>
+
 </header>
 
 <!-- Hero / Home Section -->
@@ -104,7 +125,7 @@
   <h2>Contact</h2>
   <div>
     <a id="mail" href="mailto:davidsimionov05@gmail.com"><img src="images/email-and-mail-icon-black-free-png.webp" width="30px"></a>
-    <a id="linkedin" href="https://www.linkedin.com/in/david-simionov-9b972b300/"><img src="images/hd-linkedin-square-black-icon-transparent-background-7017516949739946gsykkwdmd-removebg-preview.png" width="30px"></a>
+    <a id="linkedin" href="https://www.linkedin.com/in/david-simionov-6a1b7a39a/"><img src="images/hd-linkedin-square-black-icon-transparent-background-7017516949739946gsykkwdmd-removebg-preview.png" width="30px"></a>
     <a id="insta" href="https://www.instagram.com/simionovd_5/"><img src="images/download-removebg-preview.png" width="30px"></a>
     <a id="fb" href="https://www.facebook.com/david.simionov"><img src="images/Facebook+Icon+Black.png" width="30px"></a>
   </div>
@@ -113,6 +134,7 @@
 <footer>
   <p>© 2025 David Simionov. All rights reserved.</p>
 </footer>
+<script src="script.js"></script>
 
 </body>
 </html>
