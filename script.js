@@ -1,36 +1,62 @@
-const toggleBtn = document.getElementById("theme-toggle");
-const body = document.body;
+// Mobile menu
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-// load saved theme
-if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
-    toggleBtn.textContent = "☀️";
-}
-
-toggleBtn.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-
-    if (body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark");
-        toggleBtn.textContent = "☀️";
-    } else {
-        localStorage.setItem("theme", "light");
-        toggleBtn.textContent = "🌙";
-    }
+menuBtn?.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
 });
+
+// Close menu on link click (mobile)
+navLinks?.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+    });
+});
+
+// Year in footer
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// ================= EMAILJS CONTACT FORM =================
+
+(function () {
+    emailjs.init("F_dMJQSErAxVM0Rdc");
+})();
+
+const contactForm = document.getElementById("contactForm");
+const formMsg = document.getElementById("formMsg");
+
+contactForm?.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    formMsg.textContent = "⏳ Sending message...";
+    formMsg.style.color = "#666";
+
+    emailjs.sendForm(
+        "service_ss1wkma",
+        "template_l5jg6k5",
+        this
+    ).then(() => {
+        formMsg.textContent = "✅ Message sent successfully!";
+        formMsg.style.color = "green";
+        contactForm.reset();
+    }).catch((error) => {
+        console.error("EmailJS error:", error);
+        formMsg.textContent = "❌ Error sending message. Try again.";
+        formMsg.style.color = "red";
+    });
+});
+
 
 window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
-
     setTimeout(() => {
-        loader.classList.add("hidden");
-    }, 800); // можеш 500–1200ms
+        const loader = document.getElementById("loader");
+        loader.style.opacity = "0";
+        loader.style.transition = "opacity 0.6s ease";
+
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 600);
+    }, 1200);
 });
-
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-});
-
