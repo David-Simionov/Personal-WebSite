@@ -3,6 +3,7 @@
 Welcome to my personal website — a space where I present who I am, what I build, and how to get in touch.
 
 🔗 Live Demo:
+
 https://david-simionov.github.io/Personal-WebSite/
 
 📌 About the Project
