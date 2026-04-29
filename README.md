@@ -19,11 +19,13 @@ Its main purpose is to showcase my:
 The website reflects my approach to clean design, usability, and modern frontend development.
 
 ⚙️ Technologies Used
+
 HTML5 – structure and content
 CSS3 – styling and layout (responsive design)
 JavaScript – interactivity and dynamic behavior
 
 ✨ Features
+
 Responsive design (works on desktop & mobile)
 Clean and minimal UI
 Project showcase section
@@ -31,7 +33,9 @@ About me section
 Contact section
 
 📬 Contact
+
 Feel free to reach out if you want to collaborate or just connect.
 
 🧠 Purpose
+
 This project is part of my journey in improving my frontend development skills and building a strong personal brand as a software engineer.
